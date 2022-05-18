@@ -1,5 +1,16 @@
 # @backstage/plugin-techdocs
 
+## 1.1.2-next.0
+
+### Patch Changes
+
+- 50ff56a80f: Change the `EntityDocsPage` path to be more specific and also add integration tests for `sub-routes` on this page.
+- Updated dependencies
+  - @backstage/core-components@0.9.5-next.0
+  - @backstage/integration-react@1.1.1-next.0
+  - @backstage/plugin-catalog-react@1.1.1-next.0
+  - @backstage/plugin-techdocs-react@1.0.1-next.0
+
 ## 1.1.1
 
 ### Patch Changes
