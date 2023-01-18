@@ -11,3 +11,4 @@ jobs:
           urls: |
             https://demo.backstage.io/catalog?filters%5Bkind%5D=component&filters%5Buser%5D=owned
           temporaryPublicStorage: true # upload lighthouse report to the temporary storage
+          configPath: ./.lighthouserc.js
