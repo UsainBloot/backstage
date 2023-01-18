@@ -1,5 +1,9 @@
 name: Lighthouse CI
-on: push
+on:
+  workflow_run:
+    workflows: [Preview (deploy)]
+    types:
+      - completed
 jobs:
   lighthouse:
     runs-on: ubuntu-latest
@@ -9,6 +13,6 @@ jobs:
         uses: treosh/lighthouse-ci-action@v9
         with:
           urls: |
-            https://demo.backstage.io/catalog?filters%5Bkind%5D=component&filters%5Buser%5D=owned
+            https://app.uffizzi.com/github.com/usainbloot/${{ github.event.pull_request.number }}/pull/15414/catalog?filters%5Bkind%5D=component&filters%5Buser%5D=owned
           temporaryPublicStorage: true # upload lighthouse report to the temporary storage
           configPath: ./.lighthouserc.js
